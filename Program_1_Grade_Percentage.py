@@ -20,50 +20,55 @@ print("\n   D                                              Dropped")
 print("\nType 0 if the grade is incomplete.\nType 1 if it's withdrawn.\nType 2 if it's dropped. ")
 # Steps
 # 1. Ask for grade percentage. 
+def GetGrade():
+    GetGradePercentage = float(input("\nEnter Grade Percentage: "))
+    return GetGradePercentage
 
-GetGradePercentage = float(input("\nEnter Grade Percentage? "))
     
 # 2 Display the equivalent Grade/Mark and Description
-if GetGradePercentage >= 97 and GetGradePercentage <= 100:
-        print("Your Grade/Mark is 1.0.\n       Excellent. ")
-else:
-    if GetGradePercentage >= 94 and GetGradePercentage <= 96:
-            print("Your Grade/Mark is 1.25.\n       Excellent. ")
-    else:
-        if GetGradePercentage >= 91 and GetGradePercentage <= 93:
-                print("Your Grade/Mark is 1.5.\n       Very Good.  ")
-        else: 
-            if GetGradePercentage >= 88 and GetGradePercentage <= 90:
-                    print("Your Grade/Mark is 1.75.\n       Very Good. ")
-            else: 
-                if GetGradePercentage >= 85 and GetGradePercentage <= 87:
-                        print("Your Grade/Mark is 2.0.\n       Good. ")
-                else:
-                    if GetGradePercentage >= 82 and GetGradePercentage <= 84:
-                            print("Your Grade/Mark is 2.25.\n       Good. ")
-                    else: 
-                        if GetGradePercentage >= 79 and GetGradePercentage <= 81:
-                                print("Your Grade/Mark is 2.5.\n       Satisfactory. ")
+def GradeMark():
+        if Grade >= 97 and Grade <= 100:
+            print("Your Grade/Mark is 1.0.\n       Excellent. ")
+        else:
+            if Grade >= 94 and Grade <= 96:
+                print("Your Grade/Mark is 1.25.\n       Excellent. ")
+            else:
+                if Grade >= 91 and Grade <= 93:
+                        print("Your Grade/Mark is 1.5.\n       Very Good.  ")
+                else: 
+                     if Grade >= 88 and Grade <= 90:
+                            print("Your Grade/Mark is 1.75.\n       Very Good. ")
+                     else: 
+                        if Grade >= 85 and Grade <= 87:
+                                print("Your Grade/Mark is 2.0.\n       Good. ")
                         else:
-                            if GetGradePercentage >= 76 and GetGradePercentage <= 78:
-                                    print("Your Grade/Mark is 2.75.\n       Satisfactory. ")
-                            else:    
-                                if GetGradePercentage == 75:
-                                        print("Your Grade/Mark is 3.0.\n       Passing. ")
+                            if Grade >= 82 and Grade <= 84:
+                                    print("Your Grade/Mark is 2.25.\n       Good. ")
+                            else: 
+                                if Grade >= 79 and Grade <= 81:
+                                        print("Your Grade/Mark is 2.5.\n       Satisfactory. ")
                                 else:
-                                    if GetGradePercentage >= 65 and GetGradePercentage <= 74:
-                                            print("Your Grade/Mark is 5.0.\n       Failure. ")
-                                    else:
-                                        if GetGradePercentage == 0:
-                                                print("Your Grade/Mark is Inc.\n       Incomplete. ")
-                                        else: 
-                                            if GetGradePercentage == 1:
-                                                    print("Your Grade/Mark is W.\n       Withdrawn. ")
-                                            else:
-                                                if GetGradePercentage == 2:
-                                                        print("Your Grade/Mark is D.\n       Dropped. ")                                   
+                                     if Grade >= 76 and Grade <= 78:
+                                             print("Your Grade/Mark is 2.75.\n       Satisfactory. ")
+                                     else:    
+                                        if Grade == 75:
+                                                 print("Your Grade/Mark is 3.0.\n       Passing. ")
+                                        else:
+                                             if Grade >= 65 and Grade <= 74:
+                                                       print("Your Grade/Mark is 5.0.\n       Failure. ")
+                                             else:
+                                                if Grade == 0:
+                                                          print("Your Grade/Mark is Inc.\n       Incomplete. ")
+                                                else: 
+                                                     if Grade == 1:
+                                                              print("Your Grade/Mark is W.\n       Withdrawn. ")
+                                                     else:
+                                                          if Grade == 2:
+                                                                 print("Your Grade/Mark is D.\n       Dropped. ")                                   
 
-                                
+Grade = GetGrade()      
+Grade = round(Grade)   
+GradeMark()                       
                                 
 
 
